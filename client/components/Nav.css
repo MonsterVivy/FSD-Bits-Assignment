@@ -1,0 +1,97 @@
+/* Styling for the nav-bar */
+.nav-bar {
+    background-color: #2c3e50; /* Dark background for the nav bar */
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between; /* Distribute space between left and right sections */
+    align-items: center;
+    text-align: center;
+  }
+  
+  /* Styling for the left side (Student ID) */
+  .nav-left {
+    flex: 1; /* Take up all available space on the left */
+    display: flex;
+    justify-content: flex-start; /* Align content to the left */
+  }
+  
+  .student-id {
+    font-size: 18px;
+    color: #ecf0f1; /* Light color for the Student ID */
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Styling for the right side (Login/Register) */
+  .nav-right {
+    display: flex;
+    justify-content: flex-end; /* Align links to the right */
+    gap: 20px; /* Space between links */
+  }
+  
+  .nav-items {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 20px; /* Space between items */
+  }
+  
+  .nav-items li {
+    font-size: 18px;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .nav-items li a {
+    color: #ecf0f1; /* Light color for the links */
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transitions */
+  }
+  
+  .nav-items li a:hover {
+    background-color: #3498db; /* Blue background on hover */
+    color: #ffffff; /* White text color on hover */
+  }
+  
+  /* Styling for the logged-in state */
+  .nav-items.logged-in li a {
+    font-weight: bold;
+  }
+  
+  /* Styling for the logged-out state */
+  .nav-items.logged-out li a {
+    background-color: #34495e; /* Darker background for login/register items */
+    border: 2px solid #ecf0f1; /* Light border for buttons */
+  }
+  
+  .nav-items.logged-out li a:hover {
+    background-color: #2ecc71; /* Green background for hover */
+  }
+  
+  /* Responsive design: Stack nav items for smaller screens */
+  @media (max-width: 768px) {
+    .nav-bar {
+      flex-direction: column; /* Stack items vertically on smaller screens */
+    }
+  
+    .nav-left, .nav-right {
+      width: 100%; /* Make both sides take full width on small screens */
+      justify-content: center; /* Center-align the content */
+      margin: 10px 0; /* Add margin between left and right sections */
+    }
+  
+    .nav-items {
+      flex-direction: column; /* Stack the items vertically */
+      gap: 10px; /* Smaller gap for mobile */
+    }
+  
+    .student-id {
+      font-size: 16px; /* Smaller text on mobile */
+    }
+  
+    .nav-items li a {
+      font-size: 16px; /* Smaller font size for mobile */
+      padding: 12px 24px; /* Adjust padding for mobile */
+    }
+  }
+  
